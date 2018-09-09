@@ -16,6 +16,6 @@ public class UnavailableException extends RuntimeException {
 
     @ResponseBody
     public String getErrorCode() {
-        return "Error Code";
+        return super.getMessage();
     }
 }
