@@ -1,0 +1,515 @@
+.wrapper {
+  *zoom: 1; }
+  .wrapper:before, .wrapper:after {
+    content: " ";
+    display: table; }
+  .wrapper:after {
+    clear: both; }
+
+@-webkit-keyframes loaderAmin {
+  0%, 60%, 100% {
+    border: 0px solid rgba(11, 155, 217, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    -webkit-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    transform: scale(0.65); }
+  30% {
+    box-shadow: none;
+    border: 5px solid rgba(11, 155, 217, 0.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@keyframes loaderAmin {
+  0%, 60%, 100% {
+    border: 0px solid rgba(11, 155, 217, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    -webkit-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    transform: scale(0.65); }
+  30% {
+    box-shadow: none;
+    border: 5px solid rgba(11, 155, 217, 0.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@-webkit-keyframes loaderAmin2 {
+  0%, 60%, 100% {
+    opacity: 0; }
+  30% {
+    opacity: 1; } }
+@keyframes loaderAmin2 {
+  0%, 60%, 100% {
+    opacity: 0; }
+  30% {
+    opacity: 1; } }
+@-webkit-keyframes loaderAminM {
+  0%, 60%, 100% {
+    border: 0px solid rgba(11, 155, 217, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    -webkit-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    transform: scale(0.65); }
+  30% {
+    box-shadow: none;
+    border: 5px solid rgba(11, 155, 217, 0.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@keyframes loaderAminM {
+  0%, 60%, 100% {
+    border: 0px solid rgba(11, 155, 217, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.06);
+    -webkit-transform: scale(0.65);
+    -ms-transform: scale(0.65);
+    transform: scale(0.65); }
+  30% {
+    box-shadow: none;
+    border: 5px solid rgba(11, 155, 217, 0.2);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@-webkit-keyframes loaderAmin2M {
+  0%, 60%, 100% {
+    opacity: 0; }
+  30% {
+    opacity: 1; } }
+@keyframes loaderAmin2M {
+  0%, 60%, 100% {
+    opacity: 0; }
+  30% {
+    opacity: 1; } }
+@font-face {
+  font-family: "EurobankSans";
+  src: url("fonts/EurobankSans-Regular.eot?") format("eot"), url("fonts/EurobankSans-Regular.woff2") format("woff2"), url("fonts/EurobankSans-Regular.woff") format("woff"), url("fonts/EurobankSans-Regular.ttf") format("truetype"), url("fonts/EurobankSans-Regular.svg#EurobankSans") format("svg"); }
+@font-face {
+  font-family: "EurobankSansBlack";
+  src: url("fonts/EurobankSans-Black.eot?") format("eot"), url("fonts/EurobankSans-Black.woff2") format("woff2"), url("fonts/EurobankSans-Black.woff") format("woff"), url("fonts/EurobankSans-Black.ttf") format("truetype"), url("fonts/EurobankSans-Black.svg#EurobankSansBlack") format("svg"); }
+*,
+*:after,
+*:before {
+  box-sizing: border-box; }
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0;
+  width: 96%;
+  max-width: 1220px; }
+  @media only screen and (max-width: 1023px) {
+    .wrapper {
+      padding: 0 15px;
+      width: 100%;
+      max-width: 100%; } }
+  @media only screen and (max-width: 767px) {
+    .wrapper {
+      padding: 0 15px;
+      max-width: 100%; } }
+
+body {
+  background-color: #f6f6f6;
+  font-family: "EurobankSans";
+  font-size: 14px;
+  margin: 0; }
+
+.redirHeader {
+  background-color: #fff;
+  box-shadow: 0 0 6px 0 rgba(0, 0, 0, 0.18);
+  padding: 67px 0;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .redirHeader {
+      padding: 35px 0; } }
+  .redirHeader h1 {
+    line-height: 1;
+    margin: 0; }
+  .redirHeader .logo a,
+  .redirHeader .logo img {
+    display: inline-block;
+    vertical-align: top; }
+  .redirHeader .logo img {
+    width: 215px;
+    height: auto; }
+    @media only screen and (max-width: 767px) {
+      .redirHeader .logo img {
+        width: 180px; } }
+
+.redirection {
+  margin: 98px auto 50px;
+  text-align: center; }
+  @media only screen and (max-width: 767px) {
+    .redirection {
+      margin-top: 50px; } }
+  .redirection h2 {
+    color: #4a4a4a;
+    font-family: 'EurobankSansBlack';
+    font-size: 44px;
+    font-weight: normal;
+    line-height: 1;
+    margin: 0 0 0.45em; }
+    @media only screen and (max-width: 767px) {
+      .redirection h2 {
+        font-size: 38px; } }
+  .redirection p {
+    color: #4a4a4a;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 auto 1em;
+    max-width: 500px; }
+    @media only screen and (max-width: 767px) {
+      .redirection p {
+        font-size: 20px; } }
+  .redirection.error {
+    max-width: 500px; }
+    .redirection.error .button {
+      display: inline-block;
+      margin-top: 20px;
+      vertical-align: top; }
+    .redirection.error .icon {
+      display: inline-block;
+      margin-bottom: 30px;
+      vertical-align: top; }
+      @media only screen and (max-width: 767px) {
+        .redirection.error .icon {
+          margin-bottom: 15px; }
+          .redirection.error .icon img {
+            width: 30px; } }
+
+.loaderWrap {
+  margin-top: 60px; }
+  .loaderWrap .itemWrap {
+    display: inline-block;
+    vertical-align: top; }
+    .loaderWrap .itemWrap:nth-child(1) .item:after {
+      background-image: url(../media/circle1.svg); }
+    @media only screen and (min-width: 768px) {
+      .loaderWrap .itemWrap:nth-child(1) .item {
+        -webkit-animation-name: loaderAmin;
+        animation-name: loaderAmin;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -1s;
+        animation-delay: -1s; }
+        .loaderWrap .itemWrap:nth-child(1) .item:after {
+          -webkit-animation-name: loaderAmin2;
+          animation-name: loaderAmin2;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -1s;
+          animation-delay: -1s; } }
+    @media only screen and (max-width: 767px) {
+      .loaderWrap .itemWrap:nth-child(1) .item {
+        -webkit-animation-name: loaderAminM;
+        animation-name: loaderAminM;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -0.99s;
+        animation-delay: -0.99s; }
+        .loaderWrap .itemWrap:nth-child(1) .item:after {
+          -webkit-animation-name: loaderAmin2M;
+          animation-name: loaderAmin2M;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -0.99s;
+          animation-delay: -0.99s; } }
+    .loaderWrap .itemWrap:nth-child(2) .item:after {
+      background-image: url(../media/circle2.svg); }
+    @media only screen and (min-width: 768px) {
+      .loaderWrap .itemWrap:nth-child(2) .item {
+        -webkit-animation-name: loaderAmin;
+        animation-name: loaderAmin;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -0.75s;
+        animation-delay: -0.75s; }
+        .loaderWrap .itemWrap:nth-child(2) .item:after {
+          -webkit-animation-name: loaderAmin2;
+          animation-name: loaderAmin2;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -0.75s;
+          animation-delay: -0.75s; } }
+    @media only screen and (max-width: 767px) {
+      .loaderWrap .itemWrap:nth-child(2) .item {
+        -webkit-animation-name: loaderAminM;
+        animation-name: loaderAminM;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -0.66s;
+        animation-delay: -0.66s; }
+        .loaderWrap .itemWrap:nth-child(2) .item:after {
+          -webkit-animation-name: loaderAmin2M;
+          animation-name: loaderAmin2M;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -0.66s;
+          animation-delay: -0.66s; } }
+    .loaderWrap .itemWrap:nth-child(3) .item:after {
+      background-image: url(../media/circle3.svg); }
+    @media only screen and (min-width: 768px) {
+      .loaderWrap .itemWrap:nth-child(3) .item {
+        -webkit-animation-name: loaderAmin;
+        animation-name: loaderAmin;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -0.5s;
+        animation-delay: -0.5s; }
+        .loaderWrap .itemWrap:nth-child(3) .item:after {
+          -webkit-animation-name: loaderAmin2;
+          animation-name: loaderAmin2;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -0.5s;
+          animation-delay: -0.5s; } }
+    @media only screen and (max-width: 767px) {
+      .loaderWrap .itemWrap:nth-child(3) .item {
+        -webkit-animation-name: loaderAminM;
+        animation-name: loaderAminM;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-out;
+        animation-timing-function: ease-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -0.33s;
+        animation-delay: -0.33s; }
+        .loaderWrap .itemWrap:nth-child(3) .item:after {
+          -webkit-animation-name: loaderAmin2M;
+          animation-name: loaderAmin2M;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-out;
+          animation-timing-function: ease-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -0.33s;
+          animation-delay: -0.33s; } }
+    .loaderWrap .itemWrap:nth-child(4) .item:after {
+      background-image: url(../media/circle4.svg); }
+    @media only screen and (min-width: 768px) {
+      .loaderWrap .itemWrap:nth-child(4) .item {
+        -webkit-animation-name: loaderAmin;
+        animation-name: loaderAmin;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: -0.25s;
+        animation-delay: -0.25s; }
+        .loaderWrap .itemWrap:nth-child(4) .item:after {
+          -webkit-animation-name: loaderAmin2;
+          animation-name: loaderAmin2;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: -0.25s;
+          animation-delay: -0.25s; } }
+    @media only screen and (max-width: 767px) {
+      .loaderWrap .itemWrap:nth-child(4) {
+        display: none; } }
+    .loaderWrap .itemWrap:nth-child(5) .item:after {
+      background-image: url(../media/circle5.svg); }
+    @media only screen and (min-width: 768px) {
+      .loaderWrap .itemWrap:nth-child(5) .item {
+        -webkit-animation-name: loaderAmin;
+        animation-name: loaderAmin;
+        -webkit-animation-duration: 1.3s;
+        animation-duration: 1.3s;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-fill-mode: none;
+        animation-fill-mode: none;
+        -webkit-animation-delay: 0s;
+        animation-delay: 0s; }
+        .loaderWrap .itemWrap:nth-child(5) .item:after {
+          -webkit-animation-name: loaderAmin2;
+          animation-name: loaderAmin2;
+          -webkit-animation-duration: 1.3s;
+          animation-duration: 1.3s;
+          -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+          -webkit-animation-direction: normal;
+          animation-direction: normal;
+          -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+          -webkit-animation-fill-mode: none;
+          animation-fill-mode: none;
+          -webkit-animation-delay: 0s;
+          animation-delay: 0s; } }
+    @media only screen and (max-width: 767px) {
+      .loaderWrap .itemWrap:nth-child(5) {
+        display: none; } }
+  .loaderWrap .item {
+    background-color: #fff;
+    border-radius: 50%;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-flex-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center; }
+    .loaderWrap .item:after {
+      background-position: center center;
+      background-size: 100% 100%;
+      content: '';
+      left: -20px;
+      position: absolute;
+      top: -20px;
+      width: calc(100% + 40px);
+      height: calc(100% + 40px); }
+
+.button,
+button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  transition: all 350ms ease-out;
+  -webkit-appearance: none; }
+  .button.blue, button.blue {
+    background-color: #0c6db3;
+    border-radius: 4px;
+    color: #fff;
+    font-family: "EurobankSans";
+    font-size: 14px;
+    padding: 14px 44px 13px; }
+    .skin .button.blue,
+    .skin button.blue {
+      background-color: #fff;
+      color: #000; }
+    .button.blue.short, button.blue.short {
+      padding: 17px 29px 13px; }
+    .button.blue:hover, button.blue:hover {
+      background-color: #0d81d3; }
+    .button.blue:active, button.blue:active {
+      background-color: #12578a;
+      color: #fff; }
+    .button.blue.xs, button.blue.xs {
+      font-size: 14px;
+      padding: 10px 20px 8px; }
+  @media only screen and (max-width: 480px) {
+    .button,
+    button {
+      width: 100%; } }
+
+/*# sourceMappingURL=main.css.map */

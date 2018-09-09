@@ -1,0 +1,318 @@
+@import 'variables';
+@import 'mixins';
+
+@include font-face(EurobankSans, fonts/EurobankSans-Regular);
+@include font-face(EurobankSansBlack, fonts/EurobankSans-Black);
+     
+*, 
+*:after, 
+*:before{
+  box-sizing: border-box; 
+}
+
+.wrapper{
+  @extend %clearfix;
+  margin: 0 auto;
+  padding: 0;
+  width: 96%;
+  max-width: $grid-max-width;
+  @include responsive(tablet) {
+    padding: 0 $grid-gutter-tablet;
+    width: 100%;
+    max-width: $grid-max-width-tablet;
+  }
+  @include responsive(mobile) {
+    padding: 0 $grid-gutter-mobile;
+    max-width: $grid-max-width-mobile;
+  }
+}
+
+body{
+  background-color: $gray8;
+  font:{
+      family: "EurobankSans";
+      size: 14px;
+  }
+  margin: 0;
+}
+
+.redirHeader{
+  background-color: $white;
+  box-shadow: 0 0 6px 0 rgba($black, 0.18);
+  padding: 67px 0;
+  text-align: center;
+  @include responsive(mobile){
+    padding: 35px 0;
+  }
+  h1{
+    line-height: 1;
+    margin: 0;
+  }
+  .logo{
+    a,
+    img{
+      display: inline-block;
+      vertical-align: top;
+    }
+    img{
+      width: 215px;
+      height: auto;
+      @include responsive(mobile){
+        width: 180px;
+      }
+    }
+  }
+}
+
+.redirection{
+  margin: 98px auto 50px;
+  text-align: center;
+  @include responsive(mobile){
+    margin-top: 50px;
+  }
+  h2{
+    color: $gray3;
+    font:{
+      family:'EurobankSansBlack';
+      size: 44px;
+      weight: normal;
+    }
+    line-height: 1;
+    margin: 0 0 0.45em;
+    @include responsive(mobile){
+      font-size: 38px;
+    }
+  }
+  p{
+    color: $gray3;
+    font-size: 24px;
+    line-height: 1.25;
+    margin: 0 auto 1em;
+    max-width: 500px;
+    @include responsive(mobile){
+      font-size: 20px;
+    }
+  }
+  &.error{
+    max-width: 500px;
+    .button{
+      display: inline-block;
+      margin-top: 20px;
+      vertical-align: top;
+    }
+    .icon{
+      display: inline-block;
+      margin-bottom: 30px;
+      vertical-align: top;
+      @include responsive(mobile){
+        margin-bottom: 15px;
+        img{
+          width: 30px;
+        }
+      }
+    }
+  }
+}
+
+.loaderWrap{
+  margin-top: 60px;
+  .itemWrap{
+    display: inline-block;
+    vertical-align: top;
+    &:nth-child(1) {
+      .item{
+        &:after{
+          background: {
+            image: url(../media/circle1.svg);
+          }
+        }
+      }
+      @include responsive(not-mobile){
+        .item{
+          @include animate(loaderAmin, 1.3s, infinite, normal, ease-in-out, none,  -1s);
+          &:after{
+            @include animate(loaderAmin2, 1.3s, infinite, normal, ease-in-out, none, -1s);
+          }
+        }
+      }
+      @include responsive(mobile){
+        .item{
+            @include animate(loaderAminM, 1.3s, infinite, normal, ease-out, none,  -0.99s);
+            &:after{
+              @include animate(loaderAmin2M, 1.3s, infinite, normal, ease-out, none, -0.99s);
+            }
+        }
+      }
+    }
+    &:nth-child(2){
+      .item{
+        &:after{
+          background: {
+            image: url(../media/circle2.svg);
+          }
+        }
+      }
+      @include responsive(not-mobile){
+        .item{
+          @include animate(loaderAmin, 1.3s, infinite, normal, ease-in-out, none,  -0.75s);
+          &:after{
+            @include animate(loaderAmin2, 1.3s, infinite, normal, ease-in-out, none, -0.75s);
+          }
+        }
+      }
+      @include responsive(mobile){
+        .item{
+            @include animate(loaderAminM, 1.3s, infinite, normal, ease-out, none,  -0.66s);
+            &:after{
+              @include animate(loaderAmin2M, 1.3s, infinite, normal, ease-out, none, -0.66s);
+            }
+        }
+      }
+    }
+    &:nth-child(3){
+      .item{
+        &:after{
+          background: {
+            image: url(../media/circle3.svg);
+          }
+        }
+      }
+      @include responsive(not-mobile){
+        .item{
+          @include animate(loaderAmin, 1.3s, infinite, normal, ease-in-out, none,  -0.5s);
+          &:after{
+            @include animate(loaderAmin2, 1.3s, infinite, normal, ease-in-out, none, -0.5s);
+          }
+        }
+      }
+      @include responsive(mobile){
+        .item{
+            @include animate(loaderAminM, 1.3s, infinite, normal, ease-out, none,  -0.33s);
+            &:after{
+              @include animate(loaderAmin2M, 1.3s, infinite, normal, ease-out, none, -0.33s);
+            }
+        }
+      }
+    } 
+    &:nth-child(4){
+      .item{
+        &:after{
+          background: {
+            image: url(../media/circle4.svg);
+          }
+        }
+      }
+      @include responsive(not-mobile){
+        .item{
+          @include animate(loaderAmin, 1.3s, infinite, normal, ease-in-out, none,  -0.25s);
+          &:after{
+            @include animate(loaderAmin2, 1.3s, infinite, normal, ease-in-out, none, -0.25s);
+          }
+        }
+      }
+      @include responsive(mobile){
+        display: none;
+      }
+    } 
+    &:nth-child(5){
+      .item{
+        &:after{
+          background: {
+            image: url(../media/circle5.svg);
+          }
+        }
+      }
+      @include responsive(not-mobile){
+        .item{
+          @include animate(loaderAmin, 1.3s, infinite, normal, ease-in-out, none,  0s);
+          &:after{
+            @include animate(loaderAmin2, 1.3s, infinite, normal, ease-in-out, none, 0s);
+          }
+        }
+      }
+      @include responsive(mobile){
+        display: none;
+      }
+    }
+  }
+  .item{
+    background-color: $white;
+    border-radius: 50%;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    display: -webkit-box;
+    display: -moz-box;
+    display: -webkit-flexbox;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    -moz-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -moz-box-pack: center;
+    -webkit-flex-pack: center;
+    -ms-flex-pack: center;
+    -moz-justify-content: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    &:after{
+      background: {
+        position: center center;
+        size: 100% 100%;
+      }
+      content: '';
+      left: -20px;
+      position: absolute;
+      top: -20px;
+      width: calc(100% + 40px);
+      height: calc(100% + 40px);
+    }
+  }
+}
+
+.button,
+button{
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  line-height: 1.3;
+  text-align: center;
+  text-decoration: none;
+  transition: all 350ms ease-out;
+  -webkit-appearance: none;
+  &.blue{
+    background-color: $blue1;
+    border-radius: 4px;
+    color:$white;
+    .skin &{
+      background-color: $white; 
+      color: $black; 
+    }
+    font:{
+      family: "EurobankSans";
+      size: 14px; 
+    }
+    padding: 14px 44px 13px;
+    &.short{
+      padding: 17px 29px 13px;
+    }
+    &:hover{
+     background-color: $blue2;
+    }
+    &:active{
+     background-color: $blue3;
+      color:$white;
+    }
+    &.xs{
+      font-size: 14px;
+      padding: 10px 20px 8px;
+    }
+  }
+  @include responsive(mobile-small){
+    width: 100%;
+  }
+}

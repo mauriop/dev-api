@@ -1,0 +1,151 @@
+@function str-replace($string, $search, $replace: "") {
+	$index: str-index($string, $search);
+
+	@if $index {
+		@return str-slice($string, 1, $index - 1) + $replace + str-replace(str-slice($string, $index + str-length($search)), $search, $replace);
+	}
+
+	@return $string;
+}
+
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+%clearfix {
+    *zoom: 1;
+    &:before, 
+    &:after {
+        content: " ";
+        display: table;
+    }
+    &:after {
+        clear: both;
+    }
+}
+
+@mixin responsive($media){
+  @if $media == tablet{
+    @media only screen and (max-width: $tablet){ @content; }
+  }@else if $media == mobile{
+    @media only screen and(max-width: $mobile){ @content; }
+  }@else if $media == mobile-small{
+    @media only screen and(max-width: $mobile-small){ @content; }
+  }@else if $media == not-mobile{
+    @media only screen and(min-width: $mobile+1){ @content; }
+  }
+}
+
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	    -ms-transform: $transforms;
+            transform: $transforms;
+}
+
+@mixin animate($name, $duration, $iteration, $direction, $easing, $fill-mode, $delay) {
+  -webkit-animation-name: $name;
+          animation-name: $name;
+  -webkit-animation-duration: $duration;
+          animation-duration: $duration;
+  -webkit-animation-iteration-count: $iteration;
+          animation-iteration-count: $iteration;
+  -webkit-animation-direction: $direction;
+          animation-direction: $direction;
+  -webkit-animation-timing-function: $easing;
+          animation-timing-function: $easing;
+  -webkit-animation-fill-mode: $fill-mode;
+          animation-fill-mode: $fill-mode;
+  -webkit-animation-delay: $delay;
+          animation-delay: $delay;
+}
+
+@mixin keyframes($animationName) {
+  @-webkit-keyframes #{$animationName} {
+    @content;
+  }
+  @keyframes #{$animationName} {
+    @content;
+  }
+}
+
+@include keyframes(loaderAmin) {
+  0%, 60%, 100%{
+    border: 0px solid rgba($blue8, 0.2);
+    box-shadow: 0 0 10px 0 rgba($black, 0.06);
+    -webkit-transform: scale(0.65);
+      -ms-transform: scale(0.65);
+        transform: scale(0.65);
+  }
+
+  30% {
+    box-shadow: none;
+    border: 5px solid rgba($blue8, 0.2);
+    -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+        transform: scale(1);
+  }
+}
+
+@include keyframes(loaderAmin2) {
+  0%, 60%, 100%{
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+}
+
+@include keyframes(loaderAminM) {
+  0%, 60%, 100%{
+    border: 0px solid rgba($blue8, 0.2);
+    box-shadow: 0 0 10px 0 rgba($black, 0.06);
+    -webkit-transform: scale(0.65);
+      -ms-transform: scale(0.65);
+        transform: scale(0.65);
+  }
+
+  30% {
+    box-shadow: none;
+    border: 5px solid rgba($blue8, 0.2);
+    -webkit-transform: scale(1);
+      -ms-transform: scale(1);
+        transform: scale(1);
+  }
+}
+
+@include keyframes(loaderAmin2M) {
+  0%, 60%, 100%{
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+}
+
+
+
