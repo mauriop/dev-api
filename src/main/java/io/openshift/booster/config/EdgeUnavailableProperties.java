@@ -14,4 +14,5 @@ import org.springframework.stereotype.Component;
 public class EdgeUnavailableProperties {
     private String code = "SESSION_CHANGE";
     private String bundleResourceLocation = "templates/messages";
+    private int messageCacheSeconds = 300;
 }
